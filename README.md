@@ -20,3 +20,5 @@ todo xapple androidlib api
 	https://android-libs.wilddogio.com/libs/custom.json
 	https://android-libs.wilddogio.com/libs/utils.json
 	https://android-libs.wilddogio.com/libs/progressbar.json
+
+[https://github.com/PatrickSR](https://github.com/PatrickSR) contributor  androidlib api 
