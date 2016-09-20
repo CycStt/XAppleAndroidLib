@@ -13,6 +13,8 @@ public interface Config {
 
     String BASE_URL = "http://gank.io/api/";
 
+    String BASE_XAPPLE_URL = "https://android-libs.wilddogio.com/";
+
 //    分类数据: http://gank.io/api/data/数据类型/请求个数/第几页
 //
 //    数据类型： 福利 | Android | iOS | 休息视频 | 拓展资源 | 前端 | all
@@ -25,6 +27,8 @@ public interface Config {
 //    http://gank.io/api/data/all/20/2
 
     String QUERY_LIST =  "data/{type}/{count}/{page}";
+
+    String GET_LIST = "libs/{type}";
 
 
 }
