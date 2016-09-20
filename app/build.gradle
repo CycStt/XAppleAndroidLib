@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.xapple.gankio"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.xapple.gankio.db'
+    targetGenDir 'src/main/java'
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
+    //https://github.com/square/retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:retrofit-adapters:2.1.0'
+//    compile 'com.squareup.retrofit2:retrofit-converters:2.1.0'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+
+    //https://github.com/ReactiveX/RxJava
+    //https://github.com/ReactiveX/RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+
+    //https://github.com/square/okhttp
+    //compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //https://github.com/JakeWharton/timber
+    compile 'com.jakewharton.timber:timber:4.3.0'
+    //https://github.com/JakeWharton/butterknife
+    compile 'com.jakewharton:butterknife:8.3.0'
+    apt 'com.jakewharton:butterknife-compiler:8.3.0'
+
+    //http://greenrobot.org/greendao/documentation/updating-to-greendao-3-and-annotations/
+    compile 'org.greenrobot:greendao:3.1.0'
+    compile 'org.greenrobot:greendao-generator:3.1.0'
+
+    //https://github.com/square/leakcanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+
+    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+    debugCompile 'com.github.moduth:blockcanary-android:1.3.0'
+    releaseCompile 'com.github.moduth:blockcanary-no-op:1.3.0'
+
+}
