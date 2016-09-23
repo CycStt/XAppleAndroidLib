@@ -1,24 +1,35 @@
 # XAppleAndroidLib
 
-gankio
+gankio 
 
 todo xapple androidlib api
 
-	https://android-libs.wilddogio.com/libs/list.json
-	https://android-libs.wilddogio.com/libs/animation.json
-	https://android-libs.wilddogio.com/libs/icon.json
-	https://android-libs.wilddogio.com/libs/image.json
-	https://android-libs.wilddogio.com/libs/chart.json
-	https://android-libs.wilddogio.com/libs/project.json
-	https://android-libs.wilddogio.com/libs/layout.json
-	https://android-libs.wilddogio.com/libs/framework.json
-	https://android-libs.wilddogio.com/libs/dialog.json
-	https://android-libs.wilddogio.com/libs/button.json
-	https://android-libs.wilddogio.com/libs/label.json
-	https://android-libs.wilddogio.com/libs/effect.json
-	https://android-libs.wilddogio.com/libs/network.json
-	https://android-libs.wilddogio.com/libs/custom.json
-	https://android-libs.wilddogio.com/libs/utils.json
-	https://android-libs.wilddogio.com/libs/progressbar.json
+##API Example
+category:
 
-[https://github.com/PatrickSR](https://github.com/PatrickSR) contributor  androidlib api 
+- list
+- animation
+- icon
+- image
+- chart
+- project
+- layout
+- framework
+- dialog
+- button
+- label
+- effect
+- network
+- custom
+- utils
+- progressbar
+
+		http://api.androidlibs.website/category/list?start=0&total=10
+	
+
+
+##For more API：
+
+[PatrickSR](https://github.com/PatrickSR) contributor   [androidlib api](https://github.com/PatrickSR/AndroidLibs-Api)
+
+
